@@ -1,0 +1,103 @@
+''' or """ = multiline string
+\n = next line
+\t = tab gives 8 spaces
+\\ = displays back slash
+\' = single quote (')
+\" = double quote (")
+
+OLD WAY:
+%s = string
+%d = integers
+%f = floating number
+%.(num of digits)f = floating numbers with fixed precision
+
+first_name = 'Asabeneh'
+last_name = 'Yetayeh'
+language = 'Python'
+formated_string = 'I am %s %s. I teach %s' %(first_name, last_name, language)
+print(formated_string)
+
+radius = 10
+pi = 3.14
+area = pi * radius ** 2
+formated_string = 'The area of circle with a radius %d is %.2f.' %(radius, area)
+
+python_libraries = ['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']
+formated_string = 'The following are python libraries:%s' % (python_libraries)
+print(formated_string) # "The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
+
+NEW WAY:
+a = 4
+b = 3
+
+print('{} + {} = {}'.format(a, b, a + b))
+
+area = pi * radius ** 2
+formated_string = 'The area of a circle with a radius {} is {:.2f}.'.format(radius, area)
+
+String Interpolation
+f' = automatically fills in the corresponding variable
+
+a = 4
+b = 3
+print(f'{a} + {b} = {a +b}')
+
+Unpacking Characters
+language = 'Python'
+a,b,c,d,e,f = language # unpacking sequence characters into variables
+
+Slicing Python Strings
+language = 'Python'
+first_three = language[0:3]
+last_three = language[-3:]
+last_three = language[3:]
+
+Reverse a String
+greeting = 'Hello, World!'
+print(greeting[::-1])
+
+Skipping Characters
+language = 'Python'
+pto = language[0:6:2] # starts at index 0 till index 6, and skips to every 2nd index
+print(pto)
+
+String Methods
+1. print(variable.capitalize()) - capitalize every 1st character of the string
+2. print(challenge.count('y')) - counts the occurences
+   print(challenge.count('y', 7, 14)) - from index 7 to    
+   index 14 (space included)
+3. print(challenge.endswith('on')) # True / False
+4. challenge = 'thirty\tdays\tof\tpython'
+    print(challenge.expandtabs()) - adds 8 spaces per 
+5. print(challenge.find('y')) - returns index of first occurence
+6. print(challenge.rfind('y')) - returns index of last occurence
+7. area = pi * radius ** 2
+   result = 'The area of a circle with radius {} is    
+   {}'.format(str(radius), str(area))
+8. sub_string = 'da' ; challenge = 'thirty days of python'
+   print(challenge.index(sub_string))  # 7
+   print(challenge.index(sub_string, 9)) # error 
+9. challenge = 'thirty days of python'
+   sub_string = 'da'
+   print(challenge.rindex(sub_string))  # 7
+   print(challenge.rindex('on', 8)) # 19 "find the last 
+   place 'on' appears, but only look from index 8 to the 
+   end."
+10. challenge = 'ThirtyDaysPython'
+   print(challenge.isalnum()) # True, checks if all 
+   are alphanumeric characters - (A–Z, a–z) and numbers 
+   (0–9)
+11. print(challenge.isdecimal()) - check if all strings are decimal (0-9)
+12. print(challenge.isdigit()) - checks if all strings are numbers
+13. print(num.isnumeric()) - numbers or number related
+14. print(challenge.isidentifier()) - if string is a valid variable name
+15. print(challenge.islower()) - if all alphabel characters are lowecase
+16. print(challenge.isupper()) - if all are uppercase
+17. web_tech = ['HTML', 'CSS', 'JavaScript', 'React'] result = ' '.join(web_tech)
+18. print(challenge.strip('noth')) - removes the character specified
+19. print(challenge.replace('python', 'coding'))
+20. print(challenge.title()) - returns a titled case string
+21. print(challenge.swapcase()) - convers all uppercase characte1rs to lowercase and vice versa
+22. print(challenge.startswith('thirty'))
+23. challenge = 'thirty days of python' 
+    print(challenge.split()) # ['thirty', 'days', 'of', 'python']
