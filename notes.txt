@@ -1,0 +1,59 @@
+tuples is a collection of diff data types. written with ()
+once created, it cannot be changed
+
+METHODS RELATED TO TUPLES:
+tuple() : create an empty tuple
+count() : count the no of specified item in tuple
+index() : find index of an item
++ operator : join two or more tuples
+
+CREATING A TUPLE: 
+- empty_tuple = ()
+or
+- empty_tuple = tuple()
+- tpl = ('item1', 'item2', 'item3')
+
+TUPLE LENGTH:
+- len(tpl)
+
+ACCESSING TUPLE ITEMS:
+Positive Indexing
+- first_item = tpl[0]
+- second_item = tpl[1]
+- last_index = len(fruits) - 1
+  last_fruit = fruits[last_index]
+Negative Indexing
+- first_item = tpl[-4]
+- second item = tpl[-3]
+
+SLICING TUPLES:
+Positive Indexing
+- all_items = tpl[0:4] : starting from 0 up till 4th index
+- all_items = tpl[0:] : starting from 0 till the end
+- middle_two_items = tpl[1:3] from index 1 up to 3 (excluding 3)
+Negative Indexing
+- all_items = tpl[-4:] : all items
+- middle_two_items = tpl[-3:-1]
+
+CHANGING TUPLES TO LIST
+- lst = list(tpl) : the tpl becomes a list and gets stored in the variable lst
+Main difference of list and tuple:
+- fruits = tuple(fruits)
+- tuple uses ()
+- list uses []
+
+CHECKING AN ITEM IN A TUPLE
+- 'item2' in tpl : shows True or False
+- print('apple' in fruits) # True
+
+JOINING TUPLES
+- tpl1 = ('item1', 'item2', 'item3')
+  tpl2 = ('item4', 'item5','item6')
+  tpl3 = tpl1 + tpl2
+
+DELETING TUPLES
+- not possible to remove a single item in a tuple but possible to delete it as a whole
+- tpl1 = ('item1', 'item2', 'item3')
+  del tpl1
+
+
