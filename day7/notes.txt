@@ -1,0 +1,67 @@
+CREATING A SET 
+- st = set()
+- st = {'item1', 'item2', 'item3'}
+
+GETTING SET'S LENGTH
+- len(st)
+
+ACCESSING ITEMS IN A SET
+- using loops
+
+CHECKING AN ITEM
+- st = {'item1', 'item2', 'item3'}
+- print('Does set st contain item3? ", 'item3' in st) # True
+
+ADDING ITEMS TO A SET
+- st.add('item4')
+
+UPDATING ITEMS TO A SET (ADD MULTIPLE)
+- st.update(['item5', 'item6', 'item7'])
+
+REMOVING ITEMS FROM A SET
+- st.remove('item2')
+- st.pop() : removes a random item from a list and returns the removed item
+- removed_item = st.pop()
+
+CLEARING ITEMS IN A SET
+- st.clear()
+
+DELETING A SET
+- del st
+
+CONVERTING LIST TO SET
+- lst = ['item1', 'item2', 'item3', 'item4', 'item1']
+- st = set(lst) # order here will be random after CONVERTING
+
+JOINING SETS
+- st1 = {'item1', 'item2', 'item3', 'item4'}
+- st2 = {'item5', 'item6', 'item7', 'item8'}
+- st3 = st1.union(st2)
+
+UPDATING A SET : inserts a set into a given set
+- st1.update(st2) # st1 will now also have the sets in st2
+
+FINDING INTERSECTION ITEMS
+- st1.intersection(st2) # finds the commonality which is {'item3', 'item2'}
+
+CHECKING SUBSET AND SUPER SET
+- subset: issubset()
+- superset: issuperset()
+st1 = {'item1', 'item2', 'item3', 'item4'}
+st2 = {'item2', 'item3'}
+- st2.issubset(st1) # True
+- st1.issuperset(st2) # True
+
+CHECKING DIFFERENCE BETWEEN TWO SETS
+- st2.difference(st1) # st2 - st1 = empty set
+- st1.difference(st2) # st1 - st2 = {item1', 'item4'} 
+
+FINDING SYMMETRIC DIFFERENCE BETWEEN TWO SETS
+- symmetric diff: returns the set that contains all items from both sets, EXCEPT
+ITEMS THAT ARE PRESENT IN BOTH SETS.
+- st2.symmetric_difference(st1) # st2 ^ st1 = {'item1', 'item4'}
+
+JOINING SETS
+- disjoint when sets do not have a common item
+- st2.isdisjoint(st1) # False - they have something in common
+
