@@ -1,0 +1,51 @@
+CREATING A DICTIONARY
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+
+FINDING THE DICTIONARY LENGTH
+print(len(dct)) # 4
+
+ACCESSING DICTIONARY ITEMS
+print(dct['key1']) # value1
+
+CHECKING IF A KEY EXISTS
+print(dct.get('first_name'))
+
+ADDING ITEMS TO A DICTIONARY
+dct['key5'] = 'value5'
+dct['key5'].append('HTML', 'CSS')
+
+MODIFYING ITEMS IN A DICTIONARY
+dct['key1'] = 'value1'
+
+CHECKING KEYS IN A DICTIONARY (IF IT EXISTS)
+print('key2' in dct)
+
+REMOVING KEY AND VALUE PAIRS
+- pop(key): specified key
+dct.pop('key1')
+
+- popitem(): removes last item
+dct.popitem()
+
+- del: removes with specified key name
+del dct['key2']
+
+CHANGING DICTIONARY TO LIST
+print(dct.items())
+
+CLEARING A DICTIONARY
+print(dct.clear())
+
+DELETING A DICTIONARY
+del dct
+
+COPY A DICTIONARY
+dct_copy = dct.copy()
+
+GETTING DICTIONARY KEYS AS A LIST
+keys = dct.keys()
+print(keys)
+
+GETTING DICTIONARY VALUES AS A LIST
+values = dct.values()
+print(values)
