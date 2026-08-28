@@ -87,3 +87,47 @@ person={
         'zipcode': '02210'
     }
 }
+
+# Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
+# if 'skills' in person:
+#     print('Skills exist for this person.')
+#     print(person['skills'][2])
+# else:
+#     print('Bleh')
+    
+# Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
+if 'skills' in person:
+    if 'Python' in person.get('skills', []):
+        print('Python found!')
+else:
+    print('Wew')
+
+# If a person skills has only JavaScript and React, print('He is a front end developer'), 
+# if the person skills has Node, Python, MongoDB, print('He is a backend developer'), 
+# if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), 
+# else print('unknown title') - for more accurate results more conditions can be nested!
+
+if 'React' in person['skills'] and 'Node' in person['skills'] and 'MongoDB' in person['skills']:
+    print('He is a fullstack developer.')
+
+elif 'Node' in person['skills'] and 'Python' in person['skills'] and 'MongoDB' in person['skills']:
+    print('He is a backend developer.')
+    
+elif set(person.get('skills', [])) == {'JavaScript', 'React'}: # STRICTLY JS AND REACT ONLY
+    print('He is a front end developer.')
+
+else:
+    print('Unknown title')
+    
+# If the person is married and if he lives in Finland, print the information in the following format:
+# Asabeneh Yetayeh lives in Finland. He is married.
+
+if person.get('is_married') and 'Finland' in person['country']:
+    print(person.get('first_name'), person.get('last_name'), 'lives in', person.get('country') + '.', 'He is married.')
+    
+else:
+    print('Asbaneh is not married and does not live in Finland.')
+    
+    
+
+ 
